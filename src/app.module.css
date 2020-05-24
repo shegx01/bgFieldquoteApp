@@ -1,0 +1,19 @@
+.container {
+  display: grid;
+  grid-template-columns: minmax(800px, 1366px);
+  grid-template-rows: minmax(600px, 768px);
+  background:linear-gradient(0deg, rgba(9,6,17, 0.726), rgba(9,6,17, 0.726)),
+  url('../src/images/clint-patterson-dYEuFB8KQJk-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  max-height: 100vh;
+  justify-items: center;
+}
+
+.content__wrapper {
+  display: grid;
+  width: 80vw;
+  min-width: 800px;
+  max-height: 100vh;
+  grid-template-rows: 64px 1fr;
+}
