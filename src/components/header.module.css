@@ -16,7 +16,7 @@ li:not(:first-child) {
 }
 
 li > a {
-  color: white;
+  color: #F0F4F8;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 12px;
@@ -31,6 +31,6 @@ li > a {
 }
 
 .logo > a {
-  color: white;
+  color: #F0F4F8;
 
 }

@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import styles from './app.module.css'
-// compnents import
+// components import
 import Header from './components/Header'
 import Home from './views/Home'
-import Popular from './views/Popular'
+import AllQuotes from './views/AllQuotes'
 import NotFound from './views/NotFound'
 
 function App() {
@@ -13,19 +13,19 @@ function App() {
       <div className={styles.container}>
         <div className={styles.content__wrapper}>
              <Header />
-      {/* 
-      tell react router to switch between 
+      {/*
+      tell react router to switch between
       components and render the appropriate route
       */}
       <Switch>
         <Route exact path="/" component={Home}/>
-        <Route path="/popular" component={Popular}/>
+        <Route path="/all-quotes" component={AllQuotes}/>
         <Route component={NotFound} />
        </Switch>
         </div>
-      
+
       </div>
-     
+
     </Router>
     );
 }

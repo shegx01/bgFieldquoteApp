@@ -12,7 +12,7 @@ export default function Header() {
 
       <ul>
         <li>
-            <Link to="/popular">Popular</Link>
+            <Link to="/all-quotes">all quotes</Link>
         </li>
       </ul>
     </div>
