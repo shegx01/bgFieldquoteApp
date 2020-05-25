@@ -6,11 +6,11 @@ import { Icon, InlineIcon } from '@iconify/react';
 import errorStandardLine from '@iconify/icons-clarity/error-standard-line';
 
 export default function NotFound(props) {
-  let {message } = props
+  let {message } = props;
   return (
     <div className={styles.container}>
-      <Icon icon={errorStandardLine} color="#BCCCDC" className={styles.icon}/>
-      <h4 className={styles.message}>{message}</h4>
+      <Icon icon={errorStandardLine} color="#627D98" className={styles.icon}/>
+      <h4 className={styles.message}>{message || "the requested route not found"}</h4>
     </div>
   )
 }
