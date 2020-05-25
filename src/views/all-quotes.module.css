@@ -13,3 +13,13 @@
 .container::-webkit-scrollbar {
     width: 0;
 }
+
+/*
+media queries here
+*/
+@media only screen and (max-width: 1024px) {
+    .container {
+        justify-self: start;
+    }
+}
+
