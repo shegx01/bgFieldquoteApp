@@ -1,40 +1,29 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
 import useFetch from '../api/useFetch'
 import styles from './home.module.css'
-import  SingleQuote from '../components/SingleQuote'
+import SingleQuote from '../components/SingleQuote'
 import NotFound from './NotFound';
-import Loadiing from '../components/Loading';
+import Loading from '../components/Loading';
+import useNetwork from '../hooks/useNetwork';
 
 export default function Home() {
   const url = "https://api.quotable.io/random";
-  const [requestNewQuote, setRequestNewQuote] = useState(false)
-  const [isOnline, setIsOnline] = useState(navigator.onLine);
-  const { quoteData, responseStatus, loading, setLoading} = useFetch(url, requestNewQuote);
-
-
-  //watch if the user is online
-  useEffect(() => {
-    if(isOnline === false) {
-      setIsOnline(navigator.onLine)
-    }
-  }, [isOnline]);
-
-
+  const [requestNewQuote, setRequestNewQuote] = useState(false);
+  //custom hooks
+  const {quoteData, responseStatus, loading, setLoading} = useFetch(url, requestNewQuote);
+  const {isOnline} = useNetwork();
   //no network at all
-  if(isOnline === false) {
-    return <NotFound message={"a network error occured"}/>
+  if (isOnline === false) {
+    return <NotFound message={"a network error occurred"}/>
   }
   if (loading) {
-    return <Loadiing/>
+    return <Loading/>
   }
-
   //we might want to compose different errors
   //based on respnse code but its too overkill
   if (responseStatus) {
     return <NotFound message={'error fetching data'}/>
   }
-
-
   //function or method/event handler to
   //trigger update of new quote
   function toggleQuoteRequest(_evt) {
@@ -52,11 +41,7 @@ export default function Home() {
           new quote
         </button>
       </div>
-      <div>
-      {/*  nothing here*/}
-      </div>
     </div>
   )
 }
-
 // Math.floor(Math.random() * Math.floor(max)

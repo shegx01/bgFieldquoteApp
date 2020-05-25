@@ -12,9 +12,21 @@
 
 .content__wrapper {
   display: grid;
-  width: 80vw;
-  min-width: 800px;
+  width: 86vw;
+  min-width: 768px;
   max-height: 100vh;
+  grid-template-columns: 1fr;
   grid-template-rows: 64px 1fr;
   position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100vw;
+    grid-template-columns: 1fr;
+  }
+
+  .content__wrapper {
+    min-width: 92vw;
+  }
 }

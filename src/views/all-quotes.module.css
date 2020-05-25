@@ -1,0 +1,15 @@
+.container {
+    display: grid;
+    max-width: 50%;
+    min-width: 15%;
+    justify-self: center;
+    margin-top: 40px;
+    max-height: 100vh;
+    overflow-y: scroll;
+    padding: 20px 10px;
+    scrollbar-width: none;
+}
+
+.container::-webkit-scrollbar {
+    width: 0;
+}

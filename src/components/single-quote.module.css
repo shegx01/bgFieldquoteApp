@@ -1,6 +1,6 @@
 .wrapper {
     position: relative;
-    max-width: 50%;
+    max-width: 90%;
 }
 
 
@@ -17,7 +17,7 @@
 .content:before {
     content: '\201c';
     position: absolute;
-    color: #063043;
+    color: rgba(97, 65, 25, 0.45);
     font-weight: bold;
     left: -82px;
     bottom: -2vw;
@@ -28,8 +28,8 @@
 .content:after{
     content: '\201d';
     position: absolute;
-    font-size: 120px;
-    color: #063043;
+    font-size: 150px;
+    color: rgba(97, 65, 25, 0.45);
     font-weight: bold;
     right: -50px;
     top: 0;
@@ -71,4 +71,25 @@
 
 .tag__item:not(:first-child) {
     margin-left: 10px;
+}
+
+/*
+media queries
+*/
+
+@media only screen and (max-width: 768px) {
+    .content {
+        font-size: 20px;
+    }
+    .wrapper {
+        min-width: 60%;
+        margin-left: 10px;
+    }
+
+    .content:after {
+        right: -46px;
+        top: 0;
+
+    }
+
 }

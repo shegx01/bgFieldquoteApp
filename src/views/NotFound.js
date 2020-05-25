@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './not-found.module.css'
 
 //import directive for icons
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon} from '@iconify/react';
 import errorStandardLine from '@iconify/icons-clarity/error-standard-line';
 
 export default function NotFound(props) {

@@ -15,7 +15,7 @@ export default function SingleQuote(props) {
         </p>
 
         <ul>
-         { quote.tags.map(tag => ( <li className={styles.tag__item}>{tag}</li>) )}
+         { quote.tags.map(tag => ( <li className={styles.tag__item} key={tag}>{tag}</li>) )}
         </ul>
       </div>
       <h6 className={styles.author}>
@@ -25,4 +25,5 @@ export default function SingleQuote(props) {
     </div>
   );
 }
+
 
